@@ -3,8 +3,7 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: url(../fotos/fondo.jpeg) no-repeat center top;
-	background-size: cover;
+	background-color: #E9E5DC;
 }
 
 .cabeza {
@@ -15,28 +14,26 @@ body {
 	font-family: "Constantia", serif;
 	font-size: 15px;
 	padding: 1px;
-	color: #fff;
+	color:#fff;
 }
 
 .centro {
 	margin-top: 15px;
 	padding: 20px;
 	width: 600px;
-	height: 250px;
-	background-color: rgba(0, 0, 255, 0.2);
-	text-align : justify;
+	height: 640px;
+	background: #472C83;
+	text-align: justify;
 	border-radius: 3%;
 	padding: 20px;
-	text-align: justify;
-	font-size: 40px;
 }
 
 .texto {
 	margin: 0;
 	padding: 20px;
+	background-color: #2E224F;
 	border-radius: 3%;
 	color: #fff;
-	font-size: 25px;
 }
 
 .centro h2 {
@@ -47,7 +44,6 @@ body {
 .footer {
 	padding: 0;
 	margin: 0;
-	top:90%;
 	margin-top: 1%;
 	background: #472C83;
 	height: 100%;
@@ -55,8 +51,7 @@ body {
 	font-size: 15px;
 	color: #fff;
 }
-
-.footer a {
+.footer a{
 	color: #fff;
 }
 

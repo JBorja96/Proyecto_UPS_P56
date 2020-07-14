@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+<h:head>
+	<title>Iniciar Sesion</title>
+	<link rel="stylesheet" href="estilos/iniciar_sesion.css"
+		type="text/css" />
+</h:head>
+<h:body>
+	<center>
+		<div class="cabeza">
+			<h1>Comercios con entrega a domicilio</h1>
+			<ul id="button">
+				<li><a href="index.xhtml">Inicio</a></li>
+				<li><a href="autores.xhtml">Autores</a></li>
+				<li><a href="https://github.com/JBorja96/Proyecto_UPS_P56">Repositorio</a></li>
+				<li><a href="indicadores.xhtml">Indicadores</a></li>
+				<li><a href="iniciar_sesion.xhtml">Iniciar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+		<form>
+			<div class="login-box">
+
+				<h1>Iniciar Sesion</h1>
+				<label for="username">Correo</label> <input type="text"
+					name="usuario" placeholder="Ingrese el Usuario" /> <label
+					for="password">Clave</label> <input type="password" name="clave"
+					placeholder="Ingrese la Contraseña" />
+				<h:commandButton action="Enviar" value="#" />
+				<a href="index.xhtml">Página Principal</a>
+			</div>
+		</form>
+		<div class="footer">
+			Comercios con entrega a domicilio <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</h:body>
+</html>
