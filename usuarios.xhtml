@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+        <title>Usuarios</title>
+<link rel="stylesheet" href="estilos/index.css" type="text/css" />
+<link rel="stylesheet" href="estilos/usuarios.css" type="text/css" />
+    </head>
+    <body>
+    <center>
+		<div class="cabeza">
+			<h1>Administrador</h1>
+			<ul id="button">
+				<li><a href="administrador.xhtml">Inicio</a></li>
+				<li><a href="registrar.xhtml">Registrar Usuarios</a></li>
+				<li><a href="usuarios.xhtml">Usuarios</a></li>
+				<li><a
+					href="auditoria.xhtml">Auditoria</a></li>
+				<li><a href="iniciar_sesion.xhtml">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+		<div class="ti"><h1>Usuarios Registrados</h1></div>
+		<br />
+        <table border="1">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Correo</th>
+                <th>Contraseña</th>
+
+            </tr>
+             <tr class="fila_impar">
+                <td>Jessica</td>
+                <td>Borja</td>
+                <td>1753107000</td>
+                <td>jborjac1@est.ups.edu.ec</td>
+                <td>rClove</td>
+
+            </tr>
+             <tr class="fila_resaltada">
+                <td>Liseth</td>
+                <td>Cáceres</td>
+                <td>1236547890</td>
+                <td>vc1@hotmail.com</td>
+                <td>vc1234</td>
+            </tr>
+             <tr class="fila_impar">
+                <td>Christopher</td>
+                <td>Borja</td>
+                <td>1478520369</td>
+                <td>gordito@gmail.com</td>
+                <td>OyeSiri</td>
+            </tr>
+             <tr class="fila_par">
+                <td>Maria</td>
+                <td>Flores</td>
+                <td>0201090982</td>
+                <td>mflores@yahoo.com</td>
+                <td>mf4545</td>
+            </tr>
+        </table>
+        <br />
+        <input type="submit" value="Editar" />
+        <input type="submit" value="Eliminar" />
+        </center>
+    </body>
+</html>

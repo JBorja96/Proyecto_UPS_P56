@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Iniciar Sesión</title>
+	<link rel="stylesheet" href="estilos/registrar.css"
+		type="text/css" />
+</h:head>
+<h:body>
+	<center>
+				<div class="cabeza">
+			<h1>Administrador</h1>
+			<ul id="button">
+				<li><a href="administrador.xhtml">Inicio</a></li>
+				<li><a href="registrar.xhtml">Registrar Usuarios</a></li>
+				<li><a href="usuarios.xhtml">Usuarios</a></li>
+				<li><a
+					href="auditoria.xhtml">Auditoria</a></li>
+				<li><a href="iniciar_sesion.xhtml">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+		<form action="administrador.xhtml">
+			<div class="login-box">
+
+				<h1>Registrar Usuario</h1>
+				<label for="username">Correo</label> <input type="text"
+					name="usuario" placeholder="Correo" /> <label
+					for="password">Clave</label> <input type="password" name="clave"
+					placeholder="Contraseña" />
+					<label for="name">Nombre</label> <input type="text"
+					name="name" placeholder="Nombre" /> <label
+					for="apellido">Apellido</label> <input type="password" name="apellido"
+					placeholder="Apellido" />
+					<label for="ci">Cédula</label> <input type="text"
+					name="ci" placeholder="Cédula" />
+				<td colspan="3" align="center"><button type="submit"
+						class="btn btn-primary btn-lg">Registrar</button> <br /></td> <a
+					href="index.xhtml">Página Principal</a>
+			</div>
+		</form>
+		<div class="footer">
+			Comercios con entrega a domicilio <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</h:body>
+</html>
