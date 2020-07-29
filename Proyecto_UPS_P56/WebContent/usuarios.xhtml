@@ -14,8 +14,8 @@
 			<h1>Administrador</h1>
 			<ul id="button">
 				<li><a href="administrador.xhtml">Inicio</a></li>
-				<li><a href="registrar.xhtml">Registrar Usuarios</a></li>
-				<li><a href="usuarios.xhtml">Usuarios</a></li>
+				<li><a href="registrar.jsf">Registrar Usuarios</a></li>
+				<li><a href="usuarios.jsf">Usuarios</a></li>
 				<li><a
 					href="auditoria.xhtml">Auditoria</a></li>
 				<li><a href="iniciar_sesion.xhtml">Cerrar Sesión</a></li>
@@ -24,45 +24,34 @@
 		<br />
 		<div class="ti"><h1>Usuarios Registrados</h1></div>
 		<br />
-        <table border="1">
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Cédula</th>
-                <th>Correo</th>
-                <th>Contraseña</th>
-
-            </tr>
-             <tr class="fila_impar">
-                <td>Jessica</td>
-                <td>Borja</td>
-                <td>1753107000</td>
-                <td>jborjac1@est.ups.edu.ec</td>
-                <td>rClove</td>
-
-            </tr>
-             <tr class="fila_resaltada">
-                <td>Liseth</td>
-                <td>Cáceres</td>
-                <td>1236547890</td>
-                <td>vc1@hotmail.com</td>
-                <td>vc1234</td>
-            </tr>
-             <tr class="fila_impar">
-                <td>Christopher</td>
-                <td>Borja</td>
-                <td>1478520369</td>
-                <td>gordito@gmail.com</td>
-                <td>OyeSiri</td>
-            </tr>
-             <tr class="fila_par">
-                <td>Maria</td>
-                <td>Flores</td>
-                <td>0201090982</td>
-                <td>mflores@yahoo.com</td>
-                <td>mf4545</td>
-            </tr>
-        </table>
+        <h:dataTable id="personas"
+				value="#{beanRegistroPersona.listaPersona()}" var="listarUsuarios"
+				border="1">
+				<h:column>
+					<f:facet name="header">Correo</f:facet>    				
+                                #{listarUsuarios.correo}
+                        </h:column>
+				<h:column>
+					<f:facet name="header">Clave</f:facet>    				
+                                #{listarUsuarios.clave}
+                        </h:column>
+				<h:column>
+					<f:facet name="header">Nombre</f:facet>    				
+                                #{listarUsuarios.nombre}
+                        </h:column>
+				<h:column>
+					<f:facet name="header">Apellido</f:facet>    				
+                                #{listarUsuarios.apellido}
+                        </h:column>
+                        <h:column>
+					<f:facet name="header">Cedula</f:facet>    				
+                                #{listarUsuarios.cedula}
+                        </h:column>
+				<h:column>
+					<f:facet name="header">Perfil</f:facet>    				
+                                #{listarUsuarios.id_perfil}
+                        </h:column>
+			</h:dataTable>
         <br />
         <input type="submit" value="Editar" />
         <input type="submit" value="Eliminar" />
