@@ -202,13 +202,13 @@ public class BeanRegistroPersona implements Serializable {
         	        	
             if (valor == 1) {
             	clearLogin();
-                return "" + valor;           
+                return "administrador.xhtml";           
 
             }
 
             if (valor == 2) {
             	clearLogin();
-                return "" + valor;
+                return "user.xhtml";
             }
 
             

@@ -3,7 +3,8 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.prime.com.tr/ui">
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
 	<title>Iniciar Sesión</title>
 	<link rel="stylesheet" href="estilos/iniciar_sesion.css"
@@ -14,27 +15,31 @@
 		<div class="cabeza">
 			<h1>Comercios con entrega a domicilio</h1>
 			<ul id="button">
-				<li><a href="index.xhtml">Inicio</a></li>
-				<li><a href="autores.xhtml">Autores</a></li>
+				<li><a href="index.jsf">Inicio</a></li>
+				<li><a href="autores.jsf">Autores</a></li>
 				<li><a href="https://github.com/JBorja96/Proyecto_UPS_P56">Repositorio</a></li>
-				<li><a href="indicadores.xhtml">Indicadores</a></li>
-				<li><a href="iniciar_sesion.xhtml">Iniciar Sesión</a></li>
+				<li><a href="indicadores.jsf">Indicadores</a></li>
+				<li><a href="iniciar_sesion.jsf">Iniciar Sesión</a></li>
 			</ul>
 		</div>
 		<br />
-		<form action="administrador.xhtml">
+		<h:form>
 			<div class="login-box">
 
 				<h1>Iniciar Sesión</h1>
-				<label for="username">Correo</label> <input type="text"
-					name="usuario" placeholder="Ingrese el Usuario" /> <label
-					for="password">Clave</label> <input type="password" name="clave"
-					placeholder="Ingrese la Contraseña" />
-				<td colspan="3" align="center"><button type="submit"
-						class="btn btn-primary btn-lg">Iniciar Sesión</button> <br /></td> <a
-					href="index.xhtml">Página Principal</a>
+				<label for="correo">Correo</label>
+
+				<h:inputText id="correo" value="#{beanRegistroPersona.correo}"
+					pt:placeholder="Ingrese el Correo Electronico" required="true"></h:inputText>
+				<label for="clave">Clave</label>
+				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
+					pt:placeholder="Ingrese su Clave" required="true"></h:inputSecret>
+
+				<h:commandButton value="Iniciar Sesión"
+					action="#{beanRegistroPersona.ingresoAlSistema()}" />
+				<a href="index.jsf">Página Principal</a>
 			</div>
-		</form>
+		</h:form>
 		<div class="footer">
 			Comercios con entrega a domicilio <br /> <a
 				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
