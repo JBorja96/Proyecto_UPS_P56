@@ -21,9 +21,9 @@ body {
 .centro {
 	margin-top: 15px;
 	padding: 20px;
-	width: 600px;
-	height: 300px;
-	background-color: rgba(0, 0, 255, 0.2);
+	width: 709px;
+	height: 400px;
+	background-color: rgba(0, 0, 255, 0.4);
 	text-align : justify;
 	border-radius: 3%;
 	padding: 20px;
@@ -32,13 +32,18 @@ body {
 }
 
 .texto {
+	background-color: rgba(5, 39, 64, 0.4);
 	margin: 0;
 	padding: 20px;
 	border-radius: 3%;
 	color: #fff;
 	font-size: 25px;
+	display: block;
 }
+.img {
+	display: table;
 
+}
 .centro h2 {
 	text-align: center;
 	color: #fff;

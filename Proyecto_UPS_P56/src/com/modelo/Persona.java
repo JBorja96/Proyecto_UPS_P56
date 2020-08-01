@@ -19,12 +19,13 @@ public class Persona implements Serializable {
     private String apellido;
     private String cedula;
     private int id_perfil;
+    private String n_perfil;
     
     public Persona() {
     	
     }
     
-    public Persona(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil) {
+    public Persona(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil, String n_perfil) {
     	this.id_usuario = id_usuario;
     	this.correo = correo;
     	this.clave = clave;
@@ -32,6 +33,7 @@ public class Persona implements Serializable {
     	this.apellido = apellido;
     	this.cedula = cedula;
     	this.id_perfil = id_perfil;
+    	this.n_perfil = n_perfil;
     }
 
 	public int getId_usuario() {
@@ -88,6 +90,14 @@ public class Persona implements Serializable {
 
 	public void setId_perfil(int id_perfil) {
 		this.id_perfil = id_perfil;
+	}
+
+	public String getN_perfil() {
+		return n_perfil;
+	}
+
+	public void setN_perfil(String n_perfil) {
+		this.n_perfil = n_perfil;
 	}
     
 }

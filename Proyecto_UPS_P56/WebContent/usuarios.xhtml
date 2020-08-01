@@ -25,6 +25,7 @@
 			<h1>Usuarios Registrados</h1>
 		</div>
 		<br />
+		<h:form>
 		<h:dataTable id="personas"
 			value="#{beanRegistroPersona.listaPersona()}" var="listarUsuarios"
 			border="1">
@@ -50,11 +51,23 @@
                         </h:column>
 			<h:column>
 				<f:facet name="header">Perfil</f:facet>    				
-                                #{listarUsuarios.id_perfil}
+                                #{listarUsuarios.n_perfil}
                         </h:column>
+                        <h:column>
+					<f:facet name="header">Editar</f:facet>
+					<h:commandButton action="#{beanRegistroPersona.go(listarUsuarios.cedula)}" value="Modificar" />
+					
+				<!-- <h:link value="Editar" outcome="editar_user" /> -->	
+				</h:column>
+				<h:column>
+					<f:facet name="header">Eliminar</f:facet>
+					<h:commandButton
+						actionListener="#{beanRegistroPersona.eliminacion(listarUsuarios.cedula)}"
+						value="Eliminar" />
+				</h:column>
 		</h:dataTable>
-		<br /> <input type="submit" value="Editar" /> <input type="submit"
-			value="Eliminar" />
+		</h:form>
+		<br /> 
 	</center>
 </body>
 </html>

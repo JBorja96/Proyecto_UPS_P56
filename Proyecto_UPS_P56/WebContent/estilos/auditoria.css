@@ -95,3 +95,39 @@ body {
 	padding-bottom: 12px;
 	border-radius: 10%;
 }
+
+table {
+    width:250px;
+    font:normal 19px Arial;
+    text-align:center;
+    border-collapse:collapse;
+    background-color:lightblue;
+}
+
+table th {
+	color:white;
+    font:bold 15px Arial;
+    background-color:blue;
+}
+
+input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #b80f22;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	background: #ffc107;
+	color: #000;
+}
+
+.ti{
+	font-size:15px;
+	color:white;
+	background-color: rgba(0, 0, 255, 0.4);
+}

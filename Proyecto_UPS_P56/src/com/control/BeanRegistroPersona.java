@@ -1,11 +1,13 @@
 package com.control;
 
 import java.io.Serializable;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
+import com.conexion.conexion;
 import com.modelo.Persona;
 
 @Named(value = "beanRegistroPersona")
@@ -24,6 +26,8 @@ public class BeanRegistroPersona implements Serializable {
     private String apellido;
     private String cedula;
     private int id_perfil;
+    private String a;
+    private String n_perfil;
 	private Persona persona = new Persona();
 
 	public BeanRegistroPersona() {
@@ -93,12 +97,28 @@ public class BeanRegistroPersona implements Serializable {
 	public void setPersona(Persona persona) {
 		this.persona = persona;
 	}
+	
+	public String getA() {
+		return a;
+	}
+
+	public String setA(String a) {
+		return this.a = a;
+	}
+
+	public String getN_perfil() {
+		return n_perfil;
+	}
+
+	public void setN_perfil(String n_perfil) {
+		this.n_perfil = n_perfil;
+	}
 
 	public String almaceneDatosPersona() throws SQLException {
 		int perfil = 2;
 		ControllerPersona controller = new ControllerPersona();
 
-		String respuesta = controller.enviaDatoEstudiante(id_usuario, correo, clave, nombre, apellido, cedula, perfil);
+		String respuesta = controller.enviaDatoEstudiante(id_usuario, correo, clave, nombre, apellido, cedula, perfil, n_perfil);
 
 		return respuesta;
 	}
@@ -220,5 +240,61 @@ public class BeanRegistroPersona implements Serializable {
         return "no";
     }
 
+	public String eliminacion(String id) {
+		String result = "";
+		PreparedStatement st = null;
+		conexion cl = new conexion();
+		try {
+			st = cl.getConexion().prepareStatement("delete from usuario where cedula = ? ");
+			st.setString(1, id);
+			if (st.executeUpdate() == 1) {
+				result = "";
+			} else {
+				result = "";
+			}
+		} catch (Exception ex) {
+			result = ex.getMessage();
+		} finally {
+			try {
+				st.close();
+				cl.getConexion().close();
+			} catch (Exception ex) {
+				result = ex.getMessage();
+			}
+		}
+		return result;
+	}
+	
+	public String go(String id) {
+		a=setA(id);
+		return "ncontra.jsf";
+	}
+	
+	public String cambio() {
+		String result = "";
+		conexion cl = new conexion();
+		PreparedStatement pr = null;
+		String sql = "UPDATE usuario SET clave = ? where cedula = ? ";
+		try {
+			pr = cl.getConexion().prepareStatement(sql);
+			pr.setString(1, clave);
+			pr.setString(2, a);
+			if (pr.executeUpdate() == 1) {
+				result = "usuarios.jsf";
+			} else {
+				result = "usuarios.jsf";
+			}
+		} catch (Exception ex) {
+			result = ex.getMessage();
+		} finally {
+			try {
+				pr.close();
+				cl.getConexion().close();
+			} catch (Exception ex) {
+				result = ex.getMessage();
+			}
+		}
 
+		return result;
+	}
 }

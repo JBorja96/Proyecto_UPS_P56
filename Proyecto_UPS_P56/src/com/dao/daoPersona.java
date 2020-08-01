@@ -14,7 +14,7 @@ public class daoPersona {
 
 		ResultSet re;
 		conexion cl = new conexion();
-		re = cl.consulta("select * from usuario");
+		re = cl.consulta("select id_usuario, correo, clave, nombre, apellido, cedula, perfil.id_perfil, n_perfil from usuario, perfil where usuario.id_perfil=perfil.id_perfil;");
 		int id_usuario;
 		String correo;
 		String clave;
@@ -22,6 +22,7 @@ public class daoPersona {
 		String apellido;
 		String cedula;
 		int id_perfil;
+		String n_perfil;
 		while (re.next()) {
 			id_usuario = re.getInt(1);
 			correo = re.getString(2);
@@ -30,13 +31,14 @@ public class daoPersona {
 			apellido = re.getString(5);
 			cedula = re.getString(6);
 			id_perfil = re.getInt(7);
-			persona.add(new Persona(id_usuario, correo, clave, nombre, apellido, cedula, id_perfil));
+			n_perfil = re.getString(8);
+			persona.add(new Persona(id_usuario, correo, clave, nombre, apellido, cedula, id_perfil, n_perfil));
 		}
 		return persona;
 	}
 
-	public ArrayList<Persona> envioPersona(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil) throws SQLException {
-		Persona persona = new Persona(id_usuario, correo, clave, nombre, apellido, cedula, 2);
+	public ArrayList<Persona> envioPersona(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil, String n_perfil) throws SQLException {
+		Persona persona = new Persona(id_usuario, correo, clave, nombre, apellido, cedula, 2, n_perfil);
 		persona.setId_usuario(id_usuario);
 		persona.setCorreo(correo);
 		persona.setClave(clave);

@@ -10,11 +10,11 @@ import com.dao.daoPersona;
 import com.modelo.Persona;
 
 public class ControllerPersona {
-	public String enviaDatoEstudiante(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil) {
+	public String enviaDatoEstudiante(int id_usuario, String correo, String clave, String nombre, String apellido, String cedula, int id_perfil, String n_perfil) {
 		daoPersona daoAlumno = new daoPersona();
 		String respuesta = "";
 		try {
-			daoAlumno.envioPersona(id_usuario, correo, clave, nombre, apellido, cedula, id_perfil);
+			daoAlumno.envioPersona(id_usuario, correo, clave, nombre, apellido, cedula, id_perfil, n_perfil);
 			respuesta = "RegCor";
 		} catch (Exception e) {
 			respuesta = "no";
