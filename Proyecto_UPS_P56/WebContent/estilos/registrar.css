@@ -62,7 +62,7 @@ body {
 .login-box {
 	width: 320px;
 	height: 570px;
-	background: #5AD3E3;
+	background: linear-gradient(45deg, #4E077A, #1CDECF, #9E00FF);
 	color: #000000;
 	position: inherit;
 	box-sizing: border-box;
@@ -103,7 +103,7 @@ body {
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #b80f22;
+	background: #F89A00;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;

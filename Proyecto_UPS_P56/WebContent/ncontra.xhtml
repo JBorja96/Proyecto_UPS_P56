@@ -13,7 +13,7 @@
 <h:body>
 	<center>
 		<div class="cabeza">
-			<h1>Comercios con entrega a domicilio</h1>
+			<h1>Administrador</h1>
 			<ul id="button">
 				<li><a href="administrador.jsf">Inicio</a></li>
 				<li><a href="registrar.jsf">Registrar Usuarios</a></li>
@@ -32,8 +32,6 @@
 					for="npassword">Nueva Clave</label>
 				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
 					pt:placeholder="Nueva Clave"></h:inputSecret>
-				<label for="passwordconf">Nueva Clave X2</label> <input
-					type="password" name="vclave" placeholder="Nueva Clave X2" /> <br></br>
 				<a href="usuarios.jsf">Volver</a>
 				<h:commandButton value="Guardar"
 					action="#{beanRegistroPersona.cambio()}">

@@ -43,8 +43,8 @@ public class conexion {
 		
 		this.driver ="org.postgresql.Driver";
 		this.user="postgres";
-		this.pwd="RC2301";
-		this.cadena="jdbc:postgresql://localhost:5432/db_comercio";
+		this.pwd="1753107000";
+		this.cadena="jdbc:postgresql://localhost:5433/db_comercio";
 		this.con=this.crearConexion();
 		
 	}

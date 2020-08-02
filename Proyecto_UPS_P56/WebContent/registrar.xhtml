@@ -28,27 +28,27 @@
 				<h1>Registrar Usuario</h1>
 				<label for="username">Correo</label>
 				<h:inputText id="correo" value="#{beanRegistroPersona.correo}"
-					pt:placeholder="Ingrese el Correo" required="true">
+					pt:placeholder="Ingrese el Correo" required="true" label="Correo">
 					<f:validateRegex pattern=".+[@].+[.].+" />
 				</h:inputText>
 				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
 				<label for="password">Clave</label>
 				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
-					pt:placeholder="Ingrese Clave" required="true"></h:inputSecret>
+					pt:placeholder="Ingrese Clave" required="true" label="Clave"></h:inputSecret>
 				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
 				<label for="name">Nombre</label>
 				<h:inputText type="text" id="nombre"
 					value="#{beanRegistroPersona.nombre}"
-					pt:placeholder="Ingrese el Nombre" required="true"></h:inputText>
+					pt:placeholder="Ingrese el Nombre" required="true" label="Nombre"></h:inputText>
 				<h:message for="nombre" style="color:red; font-family:Comic-Sans" />
 				<label for="lastname">Apellido</label>
 				<h:inputText id="apellido" value="#{beanRegistroPersona.apellido}"
-					pt:placeholder="Ingrese el Apellido" required="true"></h:inputText>
+					pt:placeholder="Ingrese el Apellido" required="true" label="Apellido"></h:inputText>
 				<h:message for="apellido" style="color:red; font-family:Comic-Sans" />
 				<label for="cedula">Cedula</label>
 				<h:inputText a:type="number" id="cedula"
 					value="#{beanRegistroPersona.cedula}"
-					pt:placeholder="Ingrese la Cedula" required="true"></h:inputText>
+					pt:placeholder="Ingrese la Cedula" required="true" label="Cedula"></h:inputText>
 				<h:message for="cedula" style="color:red; font-family:Comic-Sans" />
 				<br /> <br />
 				<h:commandButton value="Guardar"
