@@ -75,4 +75,30 @@ public class daoReportes {
 		}
 		return datos;
 	}
+	
+	public List<DataReport>barra1() {
+		String sql = "SELECT SK_SECTOR AS SECTOR_COMERCIAL,COUNT(SK_PROVINCIA) "
+				+ "FROM DIM_EMPRESA "
+				+ "where  SK_SECTOR='Alimentación en general' OR "
+				+ "SK_SECTOR='Artículos de papelería' OR SK_SECTOR='Frutas y hortalizas' "
+				+ "OR SK_SECTOR='Supermercado' AND PAG_WEB IS NOT NULL GROUP BY SECTOR_COMERCIAL;";
+		ResultSet rs = null;
+		List<DataReport> datos = new ArrayList<DataReport>();
+		conexion con = new conexion();
+		try {
+			rs = con.consulta(sql);
+			while (rs.next()) {
+				DataReport dr= new DataReport();
+				dr.setContador(rs.getInt(2));
+				dr.setDatos(rs.getString(1));
+
+				datos.add(dr);
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			con.cerrarConexion();
+		}
+		return datos;
+	}
 }

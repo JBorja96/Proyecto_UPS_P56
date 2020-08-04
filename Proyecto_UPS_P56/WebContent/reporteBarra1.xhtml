@@ -2,13 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-<head>
-<title>Index</title>
-<link rel="stylesheet" href="estilos/admin.css" type="text/css" />
-</head>
-<body>
-	<center>
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Filtros Cronológicos </title>
+	<link rel="stylesheet" href="estilos/admin.css" type="text/css" />
+</h:head>
+
+<h:body>
+<center>
 		<div class="cabeza">
 			<h1>Usuario</h1>
 			<ul id="button">
@@ -19,23 +21,29 @@
 			</ul>
 		</div>
 	</center>
-<center>
 	<div class="centro">
-		<div class="texto">
-		<a href="reporteBarra.jsf"><h1>Reporte Barras</h1></a>
-		<br />
-		<a href="reportePastel.jsf"><h1>Reporte Pastel</h1></a>
-		<br />
-		<a href="reporteBarra1.jsf"><h1>Reporte Productos</h1></a>
-		</div>
-	</div>
-	</center>
 	<center>
+		<h:panelGrid id="panel">
+			<p:chart type="bar" model="#{graficosControl.barra2}"
+				style="width:1500px;height:800px;" />
+
+		</h:panelGrid>
+	<br />
+	<br />
+	<br />
+<a href="reportes.jsf">Regresar a Reportes</a>	
+</center>
+</div>
+<br />
+<br />
+<br />
+<br />
+		<center>
 		<div id="pie" class="footer">
-			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano  <br /> <a
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano   <br /> <a
 				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
 				información</a>
 		</div>
 	</center>
-</body>
+</h:body>
 </html>

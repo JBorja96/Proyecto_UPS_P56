@@ -47,6 +47,7 @@ public class GraficosControl implements Serializable{
 	private PieChartModel torta;
 	private PieChartModel torta2;
 	private BarChartModel barra;
+	private BarChartModel barra2;
 	private HorizontalBarChartModel horizontalBarModel;
 	private List<DataReport> lista;
 	List<DataReport> reporte;
@@ -70,6 +71,7 @@ public class GraficosControl implements Serializable{
 		listaMes = daoFecha.ObtenerMeses();
 		//listaEtnia = daoEtnia.obtenerEtnias();
 		buscarn();
+		buscarbarra1();
 	}
 
 
@@ -110,6 +112,16 @@ public class GraficosControl implements Serializable{
 			daoReportes daoReportes = new daoReportes();
 			reportecron = daoReportes.pas();
 				graficar();
+						resultado = "Proceso ejecutado";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void buscarbarra1() {
+		try {
+			daoReportes daoReportes = new daoReportes();
+			reportecron = daoReportes.barra1();
+				graficarBarra1();
 						resultado = "Proceso ejecutado";
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -170,6 +182,28 @@ public class GraficosControl implements Serializable{
 		torta2.setDiameter(300);
 	}
 	 */
+	
+	public void graficarBarra1() {
+		daoReportes dao = new daoReportes();
+		lista = dao.barra1();
+		barra2 = new BarChartModel();
+		ChartSeries serie; 
+		for (int i = 0; i < lista.size(); i++) {
+			serie = new ChartSeries();
+			serie.setLabel(lista.get(i).getDatos());
+			serie.set(lista.get(i).getDatos(), lista.get(i).getContador());
+			barra2.addSeries(serie);	
+		}
+		barra2.setTitle("Sector Comercial");
+		barra2.setLegendPosition("ne");
+		barra2.setLegendPlacement(LegendPlacement.OUTSIDEGRID);
+		Axis x = barra2.getAxis(AxisType.X);
+		x.setLabel("Provincias");
+		Axis y = barra2.getAxis(AxisType.Y);
+		y.setLabel("Cantidad");
+		y.setMin(0);
+		y.setMax(150);
+	}
 
 	public void graficarBarrat() {
 		daoReportes dao = new daoReportes();
@@ -247,6 +281,8 @@ public class GraficosControl implements Serializable{
 		torta2.setShowDataLabels(true);
 		torta2.setDiameter(300);
 	}
+	
+	
 	/*
 	public void graficarGenero() {
 		DaoReportes dao = new DaoReportes();
@@ -286,6 +322,16 @@ public class GraficosControl implements Serializable{
 	 */
 	
 	
+	public BarChartModel getBarra2() {
+		return barra2;
+	}
+
+
+	public void setBarra2(BarChartModel barra2) {
+		this.barra2 = barra2;
+	}
+
+
 	public List<SelectItem> getListaProvincia() {
 		return listaProvincia;
 	}
