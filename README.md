@@ -4,6 +4,11 @@ Proyecto final 5to semestre.
 
 Desarrollo de una aplicación web que acceda a una base de datos multidimensional utilizando herramientas de software libre.
 
+# ENFOQUE COMERCIAL DE LA APLICACION 
+La APP generadora de pedidos a domicilio ha sido desarrollada con la mejor tecnología, con lo que garantizamos una experiencia libre de bugs o errores. De cualquier modo siempre estaremos pendientes del correcto funcionamiento u operación de la misma, ya que nuestros clientes no tienen que preocuparse por aspectos técnicos (soporte técnico o reparación de fallas), nosotros nos encargamos de ello.
+
+#
+
 ### INTRODUCCIÓN 📋
 La pagina web tiene acceso a la base de datos sobre el comercio con entrega a domicilio de España. La Web es accesible desde cualquier navegador por Internet y tiene información referente a los indicadores que maneja el sistema y gráficas básicas de los reportes.
 
