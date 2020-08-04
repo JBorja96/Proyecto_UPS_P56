@@ -30,18 +30,21 @@
 				<label for="correo">Correo</label>
 
 				<h:inputText id="correo" value="#{beanRegistroPersona.correo}"
-					pt:placeholder="Ingrese el Correo Electronico" required="true"></h:inputText>
+					pt:placeholder="Ingrese el Correo Electronico" required="true" label="Correo">
+						<f:validateRegex pattern=".+[@].+[.].+" />
+				</h:inputText>
+				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
 				<label for="clave">Clave</label>
 				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
-					pt:placeholder="Ingrese su Clave" required="true"></h:inputSecret>
-
+					pt:placeholder="Ingrese su Clave" required="true"  label="Clave"></h:inputSecret>
+				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
 				<h:commandButton value="Iniciar Sesión"
 					action="#{beanRegistroPersona.ingresoAlSistema()}" />
 				<a href="index.jsf">Página Principal</a>
 			</div>
 		</h:form>
 		<div class="footer">
-			@Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano  <br /> <a
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano  <br /> <a
 				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
 				información</a>
 		</div>
