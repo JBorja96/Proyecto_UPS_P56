@@ -23,8 +23,13 @@ La pagina web tiene acceso a la base de datos sobre el comercio con entrega a do
 * Pentaho Data Integration
 * Power Architect
 
-## Wiki
-Para mas información del proyecto ingresa a nuestra Wiki [Wiki](https://github.com/jonathan2405)
+## Wiki 📖
+Para mas información del proyecto ingresa a nuestra [Wiki](https://github.com/JBorja96/Proyecto_UPS_P56/wiki)
+
+## Licencia
+Nuestro software cuenta con la licencia [MIT](https://es.wikipedia.org/wiki/Licencia_MIT#:~:text=La%20licencia%20MIT%20es%20una,%2C%20Massachusetts%20Institute%20of%20Technology)
+
+***
 
 ## Autores ✒️
 
