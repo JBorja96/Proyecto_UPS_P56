@@ -2,11 +2,10 @@
 Proyecto final 5to semestre.
 # COMERCIOS CON ENTREGA A DOMICILIO 🏍️
 
-Desarrollo de una aplicación que acceda a una base de datos multidimensional utilizando herramientas de software libre.
+Desarrollo de una aplicación web que acceda a una base de datos multidimensional utilizando herramientas de software libre.
 
-### OBJETIVOS 📋
-* Conocer las características y ventajas del software libre para utilizarlas en el desarrollo de aplicaciones integradas.
-* Realizar el análisis, diseño, e implementación de un almacén de datos que sirva de base para la generación de reportes para la ayuda en la toma de decisiones.
+### INTRODUCCIÓN 📋
+La pagina web tiene acceso a la base de datos sobre el comercio con entrega a domicilio de España. La Web es accesible desde cualquier navegador por Internet y tiene información referente a los indicadores que maneja el sistema y gráficas básicas de los reportes.
 
 ## Construido con 🛠️
 * WildFly 12.0
