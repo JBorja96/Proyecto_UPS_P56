@@ -16,8 +16,8 @@ public class conexion {
 	private String user;
 	private String pwd;
 	private String cadena;
-	
-	
+
+
 	public String getDriver()
 	{
 		return this.driver;
@@ -38,74 +38,81 @@ public class conexion {
 	{ 
 		return this.con; 
 	}
-	
+
 	public conexion() {
-		
+
 		this.driver ="org.postgresql.Driver";
 		this.user="postgres";
-		this.pwd="1753107000";
-		this.cadena="jdbc:postgresql://localhost:5433/db_comercio";
+		this.pwd="RC2301";
+		this.cadena="jdbc:postgresql://localhost:5432/pro_comercio";
 		this.con=this.crearConexion();
-		
+
 	}
-	
+
 	Connection crearConexion(){
 		try {
 			Class.forName("org.postgresql.Driver");
-			}
-			catch (ClassNotFoundException e) {
-			
-			}
-		
+		}
+		catch (ClassNotFoundException e) {
+
+		}
+
 		try{
 			Class.forName(getDriver()).newInstance();
- 			Connection con = DriverManager.getConnection(getCadena(),getUser(),getPwd());
+			Connection con = DriverManager.getConnection(getCadena(),getUser(),getPwd());
 			return con;
 		}
-	catch(Exception ee)
-	{
-		System.out.println("Error: " + ee.getMessage());
-		return null;
+		catch(Exception ee)
+		{
+			System.out.println("Error: " + ee.getMessage());
+			return null;
+		}
 	}
-	}
-	
+
 
 	public String ejecutar(String sql)
 	{
-	String error="";
-	try
-	{
-	St=(Statement) getConexion().createStatement();
-	St.execute(sql);
-	error="Datos insertados";
-	}
-	catch(Exception ex)
-	{
-	error = ex.getMessage();
-	}
-	return(error);
+		String error="";
+		try
+		{
+			St=(Statement) getConexion().createStatement();
+			St.execute(sql);
+			error="Datos insertados";
+		}
+		catch(Exception ex)
+		{
+			error = ex.getMessage();
+		}
+		return(error);
 	}
 
 
 
 	public ResultSet consulta(String sql)
 	{
-	String error="";
-	ResultSet reg=null;
-	
-	try
-	{
-	St=(Statement) getConexion().createStatement();
-	reg=St.executeQuery(sql);
-	
-	
-	}
-	catch(Exception ee)
-	{
-	error = ee.getMessage();
-	}
-	return(reg);
+		String error="";
+		ResultSet reg=null;
 
-	
+		try
+		{
+			St=(Statement) getConexion().createStatement();
+			reg=St.executeQuery(sql);
+
+
+		}
+		catch(Exception ee)
+		{
+			error = ee.getMessage();
+		}
+		return(reg);
+
+
+	}
+	public void cerrarConexion() {
+		try {
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
