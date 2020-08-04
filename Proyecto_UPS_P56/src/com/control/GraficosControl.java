@@ -35,6 +35,7 @@ public class GraficosControl implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String codProvincia;
 	private String codMes;
+	private String cod;
 	//private String codEtnia;
 	private String resultado;
 	private Integer anio1;
@@ -68,7 +69,7 @@ public class GraficosControl implements Serializable{
 		listaAnios = daoFecha.obtenerYears();
 		listaMes = daoFecha.ObtenerMeses();
 		//listaEtnia = daoEtnia.obtenerEtnias();
-
+		buscarn();
 	}
 
 
@@ -104,6 +105,17 @@ public class GraficosControl implements Serializable{
 			e.printStackTrace();
 		}
 	}
+	public void buscarn() {
+		try {
+			daoReportes daoReportes = new daoReportes();
+			reportecron = daoReportes.pas();
+				graficar();
+						resultado = "Proceso ejecutado";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	/*
 	public void buscarGen() {
 		resultado = "Proceso ejecutado";
@@ -202,6 +214,39 @@ public class GraficosControl implements Serializable{
 		y.setMin(0);
 		y.setMax(80);
 	}
+	
+	public void graficar() {
+		torta = new PieChartModel();
+		daoReportes dao = new daoReportes();
+		lista = dao.pas();
+
+		for (DataReport dr : lista) {
+			torta.set(dr.getDatos(), dr.getContador());
+		}
+
+		torta.setTitle("Provincias vs Años");
+		torta.setLegendPosition("e");
+		torta.setFill(true);
+		torta.setShowDataLabels(true);
+		torta.setDiameter(300);
+
+	}
+	
+	public void graficarl() {
+		torta2 = new PieChartModel();
+		daoReportes dao = new daoReportes();
+		lista = dao.pas();
+
+		for (DataReport dr : lista) {
+			torta2.set(dr.getDatos(), dr.getContador());
+		}
+
+		torta2.setTitle("Etnia vs Años");
+		torta2.setLegendPosition("e");
+		torta2.setFill(true);
+		torta2.setShowDataLabels(true);
+		torta2.setDiameter(300);
+	}
 	/*
 	public void graficarGenero() {
 		DaoReportes dao = new DaoReportes();
@@ -239,9 +284,21 @@ public class GraficosControl implements Serializable{
 
 	}
 	 */
+	
+	
 	public List<SelectItem> getListaProvincia() {
 		return listaProvincia;
 	}
+
+	public String getCod() {
+		return cod;
+	}
+
+
+	public void setCod(String cod) {
+		this.cod = cod;
+	}
+
 
 	public void setListaProvincia(List<SelectItem> listaProvincia) {
 		this.listaProvincia = listaProvincia;

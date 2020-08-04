@@ -53,4 +53,26 @@ public class daoReportes {
 		}
 		return datos;
 	}
+	
+	public List<DataReport>pas() {
+		String sql = "select sk_provincia,count(nombre_empresa)from dim_empresa  where email is null group by sk_provincia;";
+		ResultSet rs = null;
+		List<DataReport> datos = new ArrayList<DataReport>();
+		conexion con = new conexion();
+		try {
+			rs = con.consulta(sql);
+			while (rs.next()) {
+				DataReport dr= new DataReport();
+				dr.setContador(rs.getInt(2));
+				dr.setDatos(rs.getString(1));
+
+				datos.add(dr);
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			con.cerrarConexion();
+		}
+		return datos;
+	}
 }
