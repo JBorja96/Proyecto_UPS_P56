@@ -23,6 +23,9 @@ La pagina web tiene acceso a la base de datos sobre el comercio con entrega a do
 * Pentaho Data Integration
 * Power Architect
 
+## Wiki
+Para mas información del proyecto ingresa a nuestra Wiki [Wiki](https://github.com/jonathan2405)
+
 ## Autores ✒️
 
 * **Jonathan Adriano** - *Gestion de la base de datos* - [jonathan2405](https://github.com/jonathan2405)
