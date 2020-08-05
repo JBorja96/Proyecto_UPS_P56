@@ -13,9 +13,9 @@ Puede solicitar todo tipo de producto a cualquier negocio de venta formal, siemp
 # REQUERIMIENTOS FUNCIONALES 
 Se debe gestionar una base de datos multidimensional, cuya información provenga de diversas fuentes de datos. 
 Se debe gestionar el ingreso de usuarios especificos asi como usuarios invitados.
-Los usuarios invitados podran a informacion sobre la aplicacion y sus desarolladores.
-Los usuarios generales podran acceder a los servios de entrega de la aplicacion.
-Los usuarios orientados al modulo de seguridad tienen la capacidad de generar reportes sobre la misma.
+Los usuarios invitados podrán acceder a informacion sobre la aplicacion y sus desarolladores.
+Los usuarios administrativos podrán acceder a los servicios de administraciony auditoria de usuarios.
+Los usuarios clientes tienen la capacidad de generar reportes sobre la base de datos.
 
 ### INTRODUCCIÓN 📋
 La pagina web tiene acceso a la base de datos sobre el comercio con entrega a domicilio de España. La Web es accesible desde cualquier navegador por Internet y tiene información referente a los indicadores que maneja el sistema y gráficas básicas de los reportes.
