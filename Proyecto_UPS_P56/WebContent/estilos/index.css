@@ -34,8 +34,8 @@ body {
 .centro_3 {
 	margin-top: 15px;
 	padding: 20px;
-	width: 1300px;
-	height: 650px;
+	width: 1200px;
+	height: 520px;
 	background-color: rgba(0, 0, 255, 0.4);
 	text-align : justify;
 	border-radius: 3%;
@@ -50,6 +50,19 @@ body {
 	width: 709px;
 	height: 400px;
 	background-color: rgba(0, 0, 255, 0.4);
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.centro_4 {
+	margin-top: 15px;
+	padding: 20px;
+	width: 550px;
+	height: 250px;
+	background-color: rgba(0, 0, 255,.6);
 	text-align : justify;
 	border-radius: 3%;
 	padding: 20px;

@@ -15,14 +15,14 @@ input[type="submit"] {
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #5AD5DF;
+	background: #927CE6;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
 }
 input[type="submit"]:hover {
 	cursor: pointer;
-	background: #927CE6;
+	background: #5AD5DF;
 	color: #000;
 }
 .ti{

@@ -258,7 +258,7 @@ public class GraficosControl implements Serializable{
 			torta.set(dr.getDatos(), dr.getContador());
 		}
 
-		torta.setTitle("Provincias vs Años");
+		torta.setTitle("Provincias vs Supermercados");
 		torta.setLegendPosition("e");
 		torta.setFill(true);
 		torta.setShowDataLabels(true);

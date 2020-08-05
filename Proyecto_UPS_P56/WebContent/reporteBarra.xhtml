@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
-	<title>Filtros Cronológicos </title>
+	<title>Barras </title>
 	<link rel="stylesheet" href="estilos/admin.css" type="text/css" />
 </h:head>
 
@@ -23,7 +23,7 @@
 	<div align="center">
 
 		<h:form id="frmFiltro">
-			<p:panel header="Filtros de busqueda">
+			<p:panel header="Filtros de búsqueda">
 				<p:panelGrid>
 					<p:row>
 						<p:column>Seleccione Provicia:</p:column>
@@ -53,10 +53,10 @@
 			<h:outputText value="#{graficosControl.resultado}" />
 			<p:dataTable rows="8" paginator="true" paginatorPosition="bottom"
 				value="#{graficosControl.reportecron}" var="rep">
-				<p:column headerText="Mes">
+				<p:column headerText="Productos">
 					<h:outputText value="#{rep.datos}" />
 				</p:column>
-				<p:column headerText="Número de personas">
+				<p:column headerText="Cantidad">
 					<h:outputText value="#{rep.contador}" />
 				</p:column>
 			</p:dataTable>

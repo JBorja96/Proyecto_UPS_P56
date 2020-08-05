@@ -43,7 +43,8 @@
 				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
 				<label for="clave">Clave</label>
 				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
-					pt:placeholder="Ingrese su Clave" required="true" label="Clave"></h:inputSecret>
+					pt:placeholder="Ingrese su Clave" required="true" label="Clave">
+					<f:validateLength minimun="6" maximun="10"></f:validateLength></h:inputSecret>
 				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
 				<h:commandButton value="Iniciar Sesión"
 					action="#{beanRegistroPersona.ingresoAlSistema()}" />

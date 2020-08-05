@@ -33,8 +33,10 @@
 				</h:inputText>
 				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
 				<label for="password">Clave</label>
-				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
-					pt:placeholder="Ingrese Clave" required="true" label="Clave"></h:inputSecret>
+				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}" pt:min="6" pt:max="10" 
+				pt:pattern="Contraseña mayor a 6 dígitos" 
+					pt:placeholder="Ingrese Clave" required="true" label="Clave">
+					<f:validateLength minimun="6" maximun="10"></f:validateLength></h:inputSecret>
 				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
 				<label for="name">Nombre</label>
 				<h:inputText type="text" id="nombre"

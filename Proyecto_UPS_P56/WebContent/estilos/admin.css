@@ -30,6 +30,30 @@ body {
 	font-size: 40px;
 }
 
+.centro_8 {
+	margin-top: 15px;
+	padding: 20px;
+	width: 800px;
+	height: 400px;
+	background-color: rgba(42, 153, 231, 0.7);
+	text-align: justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.centro_barr1 {
+	margin-top: 15px;
+	padding: 20px;
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+}
+
+
 .texto {
 	margin: 0;
 	padding: 20px;
