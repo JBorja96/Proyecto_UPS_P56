@@ -12,9 +12,10 @@ body {
 	background: #472C83;
 	height: 100%;
 	font-family: "Constantia", serif;
-	font-size: 15px;
+	font-size: 30px;
 	padding: 1px;
 	color: #fff;
+	text-align: center;
 }
 
 .footer {
@@ -50,7 +51,7 @@ body {
 
 #button li a {
 	font-family: Arial;
-	font-size: 14px;
+	font-size: 20px;
 	text-decoration: none;
 	padding: 10px;
 	background-color: #82747C;

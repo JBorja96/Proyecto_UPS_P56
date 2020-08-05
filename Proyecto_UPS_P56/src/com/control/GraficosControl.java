@@ -198,7 +198,7 @@ public class GraficosControl implements Serializable{
 		barra2.setLegendPosition("ne");
 		barra2.setLegendPlacement(LegendPlacement.OUTSIDEGRID);
 		Axis x = barra2.getAxis(AxisType.X);
-		x.setLabel("Provincias");
+		x.setLabel("Productos");
 		Axis y = barra2.getAxis(AxisType.Y);
 		y.setLabel("Cantidad");
 		y.setMin(0);

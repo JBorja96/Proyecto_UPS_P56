@@ -13,14 +13,20 @@
 <h:body>
 	<center>
 		<div class="cabeza">
-			<h1>Comercios con entrega a domicilio</h1>
-			<ul id="button">
-				<li><a href="index.jsf">Inicio</a></li>
-				<li><a href="autores.jsf">Autores</a></li>
-				<li><a href="https://github.com/JBorja96/Proyecto_UPS_P56">Repositorio</a></li>
-				<li><a href="indicadores.jsf">Indicadores</a></li>
-				<li><a href="iniciar_sesion.jsf">Iniciar Sesión</a></li>
-			</ul>
+			<img style="width: 420px; height: 190px;" src="fotos/LOGO.png"
+				align="left"></img>
+			<div style="height: 120px;">
+				<h1>FREE COMMERCE DELIVERY</h1>
+			</div>
+			<center>
+				<ul id="button">
+					<li><a href="index.jsf">Inicio</a></li>
+					<li><a href="autores.jsf">Autores</a></li>
+					<li><a href="licencia.jsf">Licencia</a></li>
+					<li><a href="reporteBarra2.jsf">Indicadores</a></li>
+					<li><a href="iniciar_sesion.jsf">Iniciar Sesión</a></li>
+				</ul>
+			</center>
 		</div>
 		<br />
 		<h:form>
@@ -30,13 +36,14 @@
 				<label for="correo">Correo</label>
 
 				<h:inputText id="correo" value="#{beanRegistroPersona.correo}"
-					pt:placeholder="Ingrese el Correo Electronico" required="true" label="Correo">
-						<f:validateRegex pattern=".+[@].+[.].+" />
+					pt:placeholder="Ingrese el Correo Electronico" required="true"
+					label="Correo">
+					<f:validateRegex pattern=".+[@].+[.].+" />
 				</h:inputText>
 				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
 				<label for="clave">Clave</label>
 				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}"
-					pt:placeholder="Ingrese su Clave" required="true"  label="Clave"></h:inputSecret>
+					pt:placeholder="Ingrese su Clave" required="true" label="Clave"></h:inputSecret>
 				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
 				<h:commandButton value="Iniciar Sesión"
 					action="#{beanRegistroPersona.ingresoAlSistema()}" />
@@ -44,7 +51,8 @@
 			</div>
 		</h:form>
 		<div class="footer">
-			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano  <br /> <a
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan
+			Adriano <br /> <a
 				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
 				información</a>
 		</div>

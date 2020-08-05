@@ -9,20 +9,20 @@ table {
 table th {
 	color:white;
     font:bold 35px Arial;
-    background-color:#7D0F9D;
+    background-color:#3F346A;
 }
 input[type="submit"] {
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #b80f22;
+	background: #5AD5DF;
 	color: #fff;
 	font-size: 18px;
 	border-radius: 20px;
 }
 input[type="submit"]:hover {
 	cursor: pointer;
-	background: #ffc107;
+	background: #927CE6;
 	color: #000;
 }
 .ti{

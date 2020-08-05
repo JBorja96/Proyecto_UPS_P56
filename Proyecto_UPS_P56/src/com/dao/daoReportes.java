@@ -55,7 +55,7 @@ public class daoReportes {
 	}
 	
 	public List<DataReport>pas() {
-		String sql = "select sk_provincia,count(nombre_empresa)from dim_empresa  where email is null group by sk_provincia;";
+		String sql = "select sk_provincia,count(nombre_empresa)from dim_empresa  where sk_sector='Supermercado' group by sk_provincia;";
 		ResultSet rs = null;
 		List<DataReport> datos = new ArrayList<DataReport>();
 		conexion con = new conexion();
