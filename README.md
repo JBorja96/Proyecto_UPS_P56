@@ -7,12 +7,20 @@ Desarrollo de una aplicación web que acceda a una base de datos multidimensiona
 # ENFOQUE COMERCIAL DE LA APLICACION 
 La APP generadora de pedidos a domicilio ha sido desarrollada con la mejor tecnología, con lo que garantizamos una experiencia libre de bugs o errores. De cualquier modo siempre estaremos pendientes del correcto funcionamiento u operación de la misma, ya que nuestros clientes no tienen que preocuparse por aspectos técnicos (soporte técnico o reparación de fallas), nosotros nos encargamos de ello.
 
-#
+#TARGET DE CLIENTES
+Puede solicitar todo tipo de producto a cualquier negocio de venta formal, siempre que cuente con servicio de entrega a domicilio.
+
+#REQURIMIENTOS FUNCIONALES 
+Se debe gestionar una base de datos multidimensional, cuya información provenga de diversas fuentes de datos. 
+Se debe gestionar el ingreso de usuarios especificos asi como usuarios invitados.
+Los usuarios invitados podran a informacion sobre la aplicacion y sus desarolladores.
+Los usuarios generales podran acceder a los servios de entrega de la aplicacion.
+Los usuarios orientados al modulo de seguridad tienen la capacidad de generar reportes sobre la misma.
 
 ### INTRODUCCIÓN 📋
 La pagina web tiene acceso a la base de datos sobre el comercio con entrega a domicilio de España. La Web es accesible desde cualquier navegador por Internet y tiene información referente a los indicadores que maneja el sistema y gráficas básicas de los reportes.
 
-## Construido con 🛠️
+## HERRAMIETAS FUNDAMENTALES PARA EL DESAROLLO DE LA APLICACION 🛠️
 * WildFly 12.0
 * Eclipse JEE
 * Draw.io componente Chrome
